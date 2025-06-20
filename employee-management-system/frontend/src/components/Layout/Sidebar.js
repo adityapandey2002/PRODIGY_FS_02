@@ -23,7 +23,7 @@ const Logo = styled.div`
 const NavItem = styled(NavLink)`
   display: flex;
   align-items: center;
-  gap: 10px;
+ $gap: 10px;
   padding: 12px 20px;
   color: #bdc3c7;
   text-decoration: none;

@@ -5,7 +5,10 @@ import { toast } from 'react-toastify';
 export const useEmployees = (params) => {
   return useQuery({
     queryKey: ['employees', params],
-    queryFn: () => employeeAPI.getEmployees(params),
+    queryFn: async () => {
+      const response = await employeeAPI.getEmployees(params);
+      return response.data; // Extract just the data from the Axios response
+    },
     keepPreviousData: true,
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
@@ -14,7 +17,10 @@ export const useEmployees = (params) => {
 export const useEmployee = (id) => {
   return useQuery({
     queryKey: ['employee', id],
-    queryFn: () => employeeAPI.getEmployee(id),
+    queryFn: async () => {
+      const response = await employeeAPI.getEmployee(id);
+      return response.data;
+    },
     enabled: !!id,
   });
 };
@@ -68,7 +74,10 @@ export const useDeleteEmployee = () => {
 export const useEmployeeStats = () => {
   return useQuery({
     queryKey: ['employeeStats'],
-    queryFn: employeeAPI.getEmployeeStats,
+    queryFn: async () => {
+      const response = await employeeAPI.getEmployeeStats();
+      return response.data;
+    },
     staleTime: 10 * 60 * 1000, // 10 minutes
   });
 };
@@ -76,7 +85,10 @@ export const useEmployeeStats = () => {
 export const useSearchEmployees = (searchParams) => {
   return useQuery({
     queryKey: ['searchEmployees', searchParams],
-    queryFn: () => employeeAPI.searchEmployees(searchParams),
+    queryFn: async () => {
+      const response = await employeeAPI.searchEmployees(searchParams);
+      return response.data;
+    },
     enabled: !!searchParams.q || !!searchParams.department || !!searchParams.status,
     keepPreviousData: true,
   });

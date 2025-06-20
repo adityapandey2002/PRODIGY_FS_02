@@ -203,7 +203,7 @@ export const FlexContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: ${props => props.justify || 'flex-start'};
-  gap: ${props => props.$gap || '0'}; // Use $gap instead of gap
+ $gap: ${props => props.$gap || '0'}; // Use $gap instead of$gap
   flex-direction: ${props => props.$direction || 'row'};
   flex-wrap: ${props => props.$wrap || 'nowrap'};
 `;
@@ -212,6 +212,6 @@ export const FlexContainer = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+ $gap: 20px;
   margin-bottom: 20px;
 `;

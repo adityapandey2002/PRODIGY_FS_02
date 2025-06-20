@@ -20,8 +20,8 @@ const Subtitle = styled.p`
 
 const StatCard = styled(Card)`
   text-align: center;
-  background: ${props => props.bgcolor || 'white'};
-  color: ${props => props.textcolor || '#333'};
+  background: ${props => props.$bgcolor || 'white'};
+  color: ${props => props.$textcolor || '#333'};
 `;
 
 const StatNumber = styled.div`
@@ -60,22 +60,22 @@ const Dashboard = () => {
       </DashboardHeader>
 
       <Grid>
-        <StatCard bgcolor="#007bff" textcolor="white">
+        <StatCard $bgcolor="#007bff" $textcolor="white">
           <StatNumber>{totalEmployees}</StatNumber>
           <StatLabel>Total Employees</StatLabel>
         </StatCard>
 
-        <StatCard bgcolor="#28a745" textcolor="white">
+        <StatCard $bgcolor="#28a745" $textcolor="white">
           <StatNumber>{activeEmployees}</StatNumber>
           <StatLabel>Active Employees</StatLabel>
         </StatCard>
 
-        <StatCard bgcolor="#17a2b8" textcolor="white">
+        <StatCard $bgcolor="#17a2b8" $textcolor="white">
           <StatNumber>{departmentData.length}</StatNumber>
           <StatLabel>Departments</StatLabel>
         </StatCard>
 
-        <StatCard bgcolor="#ffc107" textcolor="#212529">
+        <StatCard $bgcolor="#ffc107" $textcolor="#212529">
           <StatNumber>{totalEmployees - activeEmployees}</StatNumber>
           <StatLabel>Inactive Employees</StatLabel>
         </StatCard>

@@ -19,7 +19,7 @@ import styled from 'styled-components';
 const FormGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+ $gap: 20px;
   margin-bottom: 20px;
 `;
 
@@ -311,7 +311,7 @@ const EmployeeForm = () => {
             </FormGroup>
           </FormGrid>
 
-          <FlexContainer gap="10px" style={{ marginTop: '30px' }}>
+          <FlexContainer $gap="10px" style={{ marginTop: '30px' }}>
             <Button
               type="submit"
               $variant="primary"
@@ -329,7 +329,7 @@ const EmployeeForm = () => {
           </FlexContainer>
         </form>
       </Card>
-    </Container>
+    </Container >
   );
 };
 

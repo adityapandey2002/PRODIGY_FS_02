@@ -38,6 +38,9 @@ const EmployeeList = () => {
   const [department, setDepartment] = useState('');
   const [status, setStatus] = useState('');
 
+
+
+
   const queryParams = {
     page,
     limit,
@@ -57,7 +60,12 @@ const EmployeeList = () => {
   if (error) return <div>Error loading employees: {error.message}</div>;
 
   // ✅ Ensure we have the correct data structure
-  const employees = data?.data || [];
+  if (!data || typeof data !== 'object') {
+    console.error('Invalid response format:', data);
+    return <div>Error: Invalid response format from server</div>;
+  }
+
+  const employees = data.data || [];
   const isValidData = Array.isArray(employees);
 
   if (!isValidData) {
@@ -212,6 +220,7 @@ const EmployeeList = () => {
     </Container>
   );
 };
+
 
 
 export default EmployeeList;

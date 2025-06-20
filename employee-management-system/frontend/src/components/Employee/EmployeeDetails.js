@@ -17,7 +17,7 @@ import { format } from 'date-fns';
 const ProfileHeader = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  $gap: 20px;
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
@@ -39,7 +39,7 @@ const ProfileImage = styled.div`
 const InfoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+ $gap: 20px;
   margin-bottom: 20px;
 `;
 

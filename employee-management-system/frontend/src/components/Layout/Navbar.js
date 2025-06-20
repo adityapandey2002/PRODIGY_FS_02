@@ -18,7 +18,7 @@ const NavbarContainer = styled.nav`
 const UserInfo = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+ $gap: 10px;
   color: #666;
 `;
 
@@ -29,7 +29,7 @@ const Navbar = () => {
     <NavbarContainer>
       <h2>Employee Management System</h2>
 
-      <FlexContainer gap="15px">
+      <FlexContainer $gap="15px">
         <UserInfo>
           <FaUser />
           <span>{user?.name}</span>
