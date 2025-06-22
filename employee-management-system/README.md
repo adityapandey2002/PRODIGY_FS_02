@@ -11,74 +11,15 @@
 A modern, full-stack employee management system built with the MERN stack.
 
 [Features](#features) •
+[Architecture](#system-architecture) •
 [Quick Start](#quick-start) •
-[Documentation](#documentation) •
-[Support](#support)
+[Screenshots](#screenshots)
 
 </div>
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [System Architecture](#system-architecture)
-- [Quick Start](#quick-start)
-- [Detailed Documentation](#detailed-documentation)
-- [API Reference](#api-reference)
-- [Development](#development)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## 🎯 Overview
 
 The Employee Management System is a comprehensive solution for managing employee data, attendance, and organizational structure. It provides a user-friendly interface for HR personnel and administrators to manage employee information efficiently.
-
-## 📸 Screenshots
-
-<div align="center">
-
-### Dashboard Overview
-![Dashboard](./screenshots/EMS-dashboard.jpg)
-*Main dashboard showing key metrics and employee statistics*
-
-### Employee Management
-<div style="display: flex; justify-content: space-between;">
-    <div>
-        <img src="./screenshots/EMS-employee-page.jpg" width="400" alt="Employee List"/>
-        <p><em>Employee listing with search and filter options</em></p>
-    </div>
-    <div>
-        <img src="./screenshots/EMS-add-employee-page.jpg" width="400" alt="Add Employee"/>
-        <p><em>Add new employee form with validation</em></p>
-    </div>
-</div>
-
-### Profile and Search
-<div style="display: flex; justify-content: space-between;">
-    <div>
-        <img src="./screenshots/EMS-profile-page.jpg" width="400" alt="Employee Profile"/>
-        <p><em>Detailed employee profile view</em></p>
-    </div>
-    <div>
-        <img src="./screenshots/EMS-searching-a-employee.jpg" width="400" alt="Search Feature"/>
-        <p><em>Advanced search functionality</em></p>
-    </div>
-</div>
-
-### Authentication
-<div style="display: flex; justify-content: space-between;">
-    <div>
-        <img src="./screenshots/EMS-login-successfull-page.jpg" width="400" alt="Login Success"/>
-        <p><em>Secure login system</em></p>
-    </div>
-    <div>
-        <img src="./screenshots/EMS-login.jpg" width="400" alt="Login Page"/>
-        <p><em>User authentication interface</em></p>
-    </div>
-</div>
-
-</div>
 
 ## ✨ Features
 
@@ -183,7 +124,6 @@ erDiagram
 ## 🚀 Quick Start
 
 ### Prerequisites
-
 - Node.js ≥ 14.0.0
 - MongoDB ≥ 4.4
 - npm or yarn
@@ -289,12 +229,6 @@ npm test
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
 
 ## 📄 License
@@ -311,4 +245,50 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## 📞 Support
 
-For support, email support@example.com or join our Slack channel. 
+For support, email support@example.com or join our Slack channel.
+
+## 📸 Screenshots
+
+<div align="center">
+
+### Dashboard Overview
+![Dashboard](./screenshots/EMS-dashboard.jpg)
+*Main dashboard showing key metrics and employee statistics*
+
+### Employee Management
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        <img src="./screenshots/EMS-employee-page.jpg" width="400" alt="Employee List"/>
+        <p><em>Employee listing with search and filter options</em></p>
+    </div>
+    <div>
+        <img src="./screenshots/EMS-add-employee-page.jpg" width="400" alt="Add Employee"/>
+        <p><em>Add new employee form with validation</em></p>
+    </div>
+</div>
+
+### Profile and Search
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        <img src="./screenshots/EMS-profile-page.jpg" width="400" alt="Employee Profile"/>
+        <p><em>Detailed employee profile view</em></p>
+    </div>
+    <div>
+        <img src="./screenshots/EMS-searching-a-employee.jpg" width="400" alt="Search Feature"/>
+        <p><em>Advanced search functionality</em></p>
+    </div>
+</div>
+
+### Authentication
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        <img src="./screenshots/EMS-login-successfull-page.jpg" width="400" alt="Login Success"/>
+        <p><em>Secure login system</em></p>
+    </div>
+    <div>
+        <img src="./screenshots/EMS-login.jpg" width="400" alt="Login Page"/>
+        <p><em>User authentication interface</em></p>
+    </div>
+</div>
+
+</div> 
