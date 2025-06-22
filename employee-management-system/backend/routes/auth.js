@@ -17,7 +17,7 @@ const router = express.Router();
 
 router.post('/register', validateUser, handleValidationErrors, register);
 router.post('/login', login);
-router.get('/logout', logout);
+router.get('/logout', protect, logout);
 router.get('/me', protect, getMe);
 router.put('/updatepassword', protect, updatePassword);
 router.post('/forgotpassword', forgotPassword);

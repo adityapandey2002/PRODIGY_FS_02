@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const employeeSchema = new mongoose.Schema({
   employeeId: {
     type: String,
-    required: true,
     unique: true,
+    sparse: true,
     uppercase: true
   },
   firstName: {
@@ -94,18 +94,37 @@ employeeSchema.virtual('fullName').get(function () {
 });
 
 // Auto-generate employee ID
-employeeSchema.pre('save', async function (next) {
-  if (!this.isNew) {
-    return next();
-  }
+employeeSchema.pre('validate', async function (next) {
+  try {
+    if (this.employeeId || !this.isNew) {
+      return next();
+    }
 
-  const count = await this.constructor.countDocuments();
-  this.employeeId = `EMP${String(count + 1).padStart(4, '0')}`;
-  next();
+    // Find the highest existing employeeId
+    const highestEmployee = await this.constructor.findOne({}, { employeeId: 1 })
+      .sort({ employeeId: -1 })
+      .lean();
+
+    let nextNumber = 1;
+    if (highestEmployee && highestEmployee.employeeId) {
+      // Extract the number from the existing highest employeeId
+      const currentNumber = parseInt(highestEmployee.employeeId.replace('EMP', ''), 10);
+      if (!isNaN(currentNumber)) {
+        nextNumber = currentNumber + 1;
+      }
+    }
+
+    // Generate the new employeeId
+    this.employeeId = `EMP${String(nextNumber).padStart(4, '0')}`;
+    next();
+  } catch (error) {
+    next(error);
+  }
 });
 
 // Indexes for better performance
 employeeSchema.index({ department: 1 });
 employeeSchema.index({ status: 1 });
+employeeSchema.index({ employeeId: 1 }, { unique: true, sparse: true });
 
 module.exports = mongoose.model('Employee', employeeSchema);

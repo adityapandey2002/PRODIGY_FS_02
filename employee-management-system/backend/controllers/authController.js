@@ -91,16 +91,15 @@ exports.login = async (req, res, next) => {
   }
 };
 
-
-
-
 // @desc    Log user out / clear cookie
 // @route   GET /api/auth/logout
 // @access  Private
 exports.logout = async (req, res, next) => {
   try {
-    // Clear refresh token from database
-    await User.findByIdAndUpdate(req.user.id, { refreshToken: null });
+    // Only attempt to clear refresh token if user exists
+    if (req.user && req.user.id) {
+      await User.findByIdAndUpdate(req.user.id, { refreshToken: null });
+    }
 
     res.status(200).json({
       success: true,

@@ -9,7 +9,8 @@
     "test": "jest",
     "seed": "node utils/seeder",
     "seed:destroy": "node utils/seeder -d",
-    "seed:import": "node utils/seeder -i"
+    "seed:import": "node utils/seeder -i",
+    "fix-employee-ids": "node utils/fixEmployeeIds.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
