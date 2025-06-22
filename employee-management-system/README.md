@@ -247,48 +247,71 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 For support, email support@example.com or join our Slack channel.
 
-## 📸 Screenshots
+## 📸 Application Showcase
 
 <div align="center">
 
-### Dashboard Overview
-![Dashboard](./screenshots/EMS-dashboard.jpg)
-*Main dashboard showing key metrics and employee statistics*
+### 📊 Dashboard & Analytics
+<img src="./screenshots/EMS-dashboard.jpg" width="100%" alt="Dashboard"/>
 
-### Employee Management
-<div style="display: flex; justify-content: space-between;">
-    <div>
-        <img src="./screenshots/EMS-employee-page.jpg" width="400" alt="Employee List"/>
-        <p><em>Employee listing with search and filter options</em></p>
-    </div>
-    <div>
-        <img src="./screenshots/EMS-add-employee-page.jpg" width="400" alt="Add Employee"/>
-        <p><em>Add new employee form with validation</em></p>
-    </div>
-</div>
+*Comprehensive dashboard displaying real-time employee metrics, department statistics, and key performance indicators*
 
-### Profile and Search
-<div style="display: flex; justify-content: space-between;">
-    <div>
-        <img src="./screenshots/EMS-profile-page.jpg" width="400" alt="Employee Profile"/>
-        <p><em>Detailed employee profile view</em></p>
-    </div>
-    <div>
-        <img src="./screenshots/EMS-searching-a-employee.jpg" width="400" alt="Search Feature"/>
-        <p><em>Advanced search functionality</em></p>
-    </div>
-</div>
+### 👥 Employee Management Interface
 
-### Authentication
-<div style="display: flex; justify-content: space-between;">
-    <div>
-        <img src="./screenshots/EMS-login-successfull-page.jpg" width="400" alt="Login Success"/>
-        <p><em>Secure login system</em></p>
-    </div>
-    <div>
-        <img src="./screenshots/EMS-login.jpg" width="400" alt="Login Page"/>
-        <p><em>User authentication interface</em></p>
-    </div>
-</div>
+<table>
+<tr>
+    <td width="50%">
+        <img src="./screenshots/EMS-employee-page.jpg" width="100%" alt="Employee List"/>
+        <p align="center"><em>Employee Directory with Advanced Filtering</em></p>
+    </td>
+    <td width="50%">
+        <img src="./screenshots/EMS-add-employee-page.jpg" width="100%" alt="Add Employee"/>
+        <p align="center"><em>Intuitive Employee Registration Form</em></p>
+    </td>
+</tr>
+</table>
+
+### 👤 Profile Management & Search
+
+<table>
+<tr>
+    <td width="50%">
+        <img src="./screenshots/EMS-profile-page.jpg" width="100%" alt="Employee Profile"/>
+        <p align="center"><em>Detailed Employee Profile Dashboard</em></p>
+    </td>
+    <td width="50%">
+        <img src="./screenshots/EMS-searching-a-employee.jpg" width="100%" alt="Search Feature"/>
+        <p align="center"><em>Smart Search with Real-time Results</em></p>
+    </td>
+</tr>
+</table>
+
+### 🔐 Secure Authentication System
+
+<table>
+<tr>
+    <td width="50%">
+        <img src="./screenshots/EMS-login.jpg" width="100%" alt="Login Page"/>
+        <p align="center"><em>Modern Authentication Interface</em></p>
+    </td>
+    <td width="50%">
+        <img src="./screenshots/EMS-login-successfull-page.jpg" width="100%" alt="Login Success"/>
+        <p align="center"><em>Secure Login Confirmation</em></p>
+    </td>
+</tr>
+</table>
+
+### 📱 Responsive Design
+*The application is fully responsive and works seamlessly across desktop, tablet, and mobile devices.*
+
+### 🔍 Key Features Demonstrated
+- Real-time Dashboard Analytics
+- Intuitive Employee Management
+- Advanced Search Capabilities
+- Secure Authentication System
+- Professional User Interface
+- Role-based Access Control
+- Data Visualization
+- Responsive Design
 
 </div> 
