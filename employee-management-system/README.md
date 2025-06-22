@@ -34,6 +34,52 @@ A modern, full-stack employee management system built with the MERN stack.
 
 The Employee Management System is a comprehensive solution for managing employee data, attendance, and organizational structure. It provides a user-friendly interface for HR personnel and administrators to manage employee information efficiently.
 
+## 📸 Screenshots
+
+<div align="center">
+
+### Dashboard Overview
+![Dashboard](./screenshots/EMS-dashboard.jpg)
+*Main dashboard showing key metrics and employee statistics*
+
+### Employee Management
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        <img src="./screenshots/EMS-employee-page.jpg" width="400" alt="Employee List"/>
+        <p><em>Employee listing with search and filter options</em></p>
+    </div>
+    <div>
+        <img src="./screenshots/EMS-add-employee-page.jpg" width="400" alt="Add Employee"/>
+        <p><em>Add new employee form with validation</em></p>
+    </div>
+</div>
+
+### Profile and Search
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        <img src="./screenshots/EMS-profile-page.jpg" width="400" alt="Employee Profile"/>
+        <p><em>Detailed employee profile view</em></p>
+    </div>
+    <div>
+        <img src="./screenshots/EMS-searching-a-employee.jpg" width="400" alt="Search Feature"/>
+        <p><em>Advanced search functionality</em></p>
+    </div>
+</div>
+
+### Authentication
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        <img src="./screenshots/EMS-login-successfull-page.jpg" width="400" alt="Login Success"/>
+        <p><em>Secure login system</em></p>
+    </div>
+    <div>
+        <img src="./screenshots/EMS-login.jpg" width="400" alt="Login Page"/>
+        <p><em>User authentication interface</em></p>
+    </div>
+</div>
+
+</div>
+
 ## ✨ Features
 
 ### 🔐 User Authentication & Authorization
@@ -62,6 +108,7 @@ The Employee Management System is a comprehensive solution for managing employee
 
 ## 🏗 System Architecture
 
+### Component Structure
 ```mermaid
 graph TD
     A[Employee Management System] --> B[Frontend - React]
@@ -77,6 +124,60 @@ graph TD
     C --> C2[Controllers]
     C --> C3[Models]
     C --> C4[Middleware]
+```
+
+### Data Flow
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant F as Frontend
+    participant A as Auth Middleware
+    participant B as Backend API
+    participant D as Database
+
+    U->>F: Login/Access
+    F->>B: Auth Request
+    B->>D: Validate
+    D->>B: User Data
+    B->>F: JWT Token
+    F->>U: Access Granted
+
+    U->>F: CRUD Operation
+    F->>A: Request + Token
+    A->>B: Validated Request
+    B->>D: Database Operation
+    D->>B: Response
+    B->>F: Updated Data
+    F->>U: UI Update
+```
+
+### Database Schema
+```mermaid
+erDiagram
+    EMPLOYEE ||--o{ DEPARTMENT : belongs_to
+    EMPLOYEE {
+        string employeeId
+        string firstName
+        string lastName
+        string email
+        string phone
+        string department
+        number salary
+        date hireDate
+        string status
+    }
+    DEPARTMENT {
+        string name
+        string description
+        string manager
+    }
+    USER ||--o{ EMPLOYEE : manages
+    USER {
+        string name
+        string email
+        string role
+        string password
+    }
 ```
 
 ## 🚀 Quick Start
